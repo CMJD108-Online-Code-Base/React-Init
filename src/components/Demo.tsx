@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const Demo = () =>{
 
@@ -14,6 +14,10 @@ export const Demo = () =>{
         setValue(value - 1)
         console.log(value)
     }
+
+    useEffect(()=>{
+        console.log("Use effect run")
+    })
 
     return(
         <>

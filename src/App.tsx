@@ -1,12 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Demo } from './components/Demo';
 
 function App() {
-  const name = "Kamal";
+
   return (
     //UI
-    <h1>Hello {name}</h1>
+     <Demo/>
   );
 }
 

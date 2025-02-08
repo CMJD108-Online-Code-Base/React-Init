@@ -1,21 +1,28 @@
+import { useState } from "react";
+
 export const Demo = () =>{
-    let num: number;
+
+    const [value,setValue] = useState(0); //useState(Initial state)
+
+    // let num = 0;
     //  add value
-    const handleOnClick = () =>{
-        alert("Added OK")
-        console.log("hello")
-        // num += 1
-        // console.log(num)
+    const handleOnClickAdd = () =>{
+        setValue(value + 1)
+        console.log(value)
+    }
+    const handleOnClickMinus = () =>{
+        setValue(value - 1)
+        console.log(value)
     }
 
     return(
         <>
-          <input type="text" readOnly style={{marginTop:"60px",marginLeft:"100px"}}/>
+          <input type="text" readOnly style={{marginTop:"60px",marginLeft:"100px"}} value={value}/>
           {/* reference a function */}
-          <button onClick={handleOnClick}>Click me to +</button>
+          <button onClick={handleOnClickAdd}>Click me to +</button>
           {/* inline function */}
           {/* <button onClick={()=>console.log("Hello Button ")}>Click me to +</button> */}
-          <button>Click me to -</button>
+          <button onClick={handleOnClickMinus}>Click me to -</button>
         </>
        
     );

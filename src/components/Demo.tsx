@@ -17,7 +17,7 @@ export const Demo = () =>{
 
     useEffect(()=>{
         console.log("Use effect run")
-    })
+    },[])
 
     return(
         <>
